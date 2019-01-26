@@ -9,7 +9,23 @@
 <body>
     <div id="app">
         <div class="container">
-            <img :src="imgSrc" :title="imgTitle">
+            <div class="card mt-5">
+                <h2 class="card-header">Near-Earth Objects</h2>
+                <table class="table">
+                    <thead class="thead-light">
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Close Approach Date</th>
+                    </thead>
+                    <tbody v-cloak>
+                        <tr v-for="(a, index) in asteroids">
+                            <td>{{index + 1}}</td>
+                            <td>{{a.name}}</td>
+                            <td>{{getCloseApproachDate(a)}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
