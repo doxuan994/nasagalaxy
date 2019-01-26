@@ -1,3 +1,7 @@
 [v-cloak] {
     display: none;
 }
+.highlight {
+    border: solid 3px red;
+    color: red;
+}

@@ -47,6 +47,9 @@ var vm = new Vue({
                     color: 'red'
                 }
             }
+        },
+        isMissingData: function (a) {
+            return a.close_approach_data.length == 0;
         }
     }
 })
