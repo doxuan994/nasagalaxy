@@ -12,3 +12,10 @@
 .shooting-star-enter-active, .shooting-star-leave-active {
     transition: all .5s ease;
 }
+.neo-list-leave-to, .neo-list-enter {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.neo-list-enter-active, .neo-list-leave-active {
+    transition: all 1s linear;
+}
