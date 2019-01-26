@@ -16,12 +16,20 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Close Approach Date</th>
+                        <th>Miss Distance</th>
                     </thead>
                     <tbody v-cloak>
                         <tr v-for="(a, index) in asteroids">
                             <td>{{index + 1}}</td>
                             <td>{{a.name}}</td>
                             <td>{{getCloseApproachDate(a)}}</td>
+                            <td>
+                                <ul v-if="a.close_approach_data.length > 0">
+                                    <li v-for="(value, key) in a.close_approach_data[0].miss_distance">
+                                        {{ key }}: {{ value }}
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
