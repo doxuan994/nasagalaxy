@@ -11,11 +11,17 @@
         <div class="container">
             <div class="card mt-5">
                 <h2 class="card-header">Near-Earth Objects</h2>
-                <div class="m-3" v-cloak v-if="numAsteroids > 0">
-                    <p>Showing {{numAsteroids}} items </p>
-                    <p>{{closestObject}} has the shortest miss distance.</p>
+                <transition name="shooting-star">
+                    <div class="m-3" v-cloak v-if="numAsteroids > 0 && showSummary">
+                        <p>Showing {{numAsteroids}} items </p>
+                        <p>{{closestObject}} has the shortest miss distance.</p>
+                    </div>
+                </transition>
+
+                <div class="m-3">
+                    <a href="#" @click="showSummary = !showSummary">Show/Hide summary</a>
                 </div>
-                <table class="table table-striped" :class="[{'table-dark': true}, 'table-bordered']">
+                <table class="table table-striped" :class="[{'table-dark': false}, 'table-bordered']">
                     <thead class="thead-light">
                         <th>#</th>
                         <th>Name</th>

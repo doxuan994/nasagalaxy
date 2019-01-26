@@ -5,3 +5,10 @@
     border: solid 3px red;
     color: red;
 }
+.shooting-star-leave-to, .shooting-star-enter {
+    transform: translate(150px) rotate(30deg);
+    opacity: 0;
+}
+.shooting-star-enter-active, .shooting-star-leave-active {
+    transition: all .5s ease;
+}

@@ -1,7 +1,8 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        asteroids: []
+        asteroids: [],
+        showSummary: true
     },
     computed: {
         numAsteroids: function () {
