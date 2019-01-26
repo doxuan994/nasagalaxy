@@ -5,8 +5,8 @@ var url = 'https://api.nasa.gov/planetary/apod?api_key=' + apiKey;
 var vm = new Vue({
     el: '#app',
     data: {
-        email: 'mike@example.com',
-        submitted: false
+        imgSrc: '',
+        imgTitle: ''
     },
     methods: {
         process: function() {
@@ -16,7 +16,7 @@ var vm = new Vue({
 })
 
 
-axios.get(url)
-    .then(function (res) {
-        console.log(res);
+axios.get(url).then(function (res) {
+        vm.imgSrc = res.data.url;
+        vm.imgTitle = res.data.title;
 });

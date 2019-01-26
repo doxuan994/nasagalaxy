@@ -9,15 +9,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <form class="mt-5" v-show="!submitted">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control form-control-lg" v-model:value="email">
-                    <!-- v-on: (@) set up event handling -->
-                    <button type="submit" class="btn btn-primary" @click.prevent="process">Submit</button>
-                </div>
-            </form>
-            <h2 class="mt-5" v-show="submitted" v-cloak>Thanks for signup!</h2>
+            <img :src="imgSrc" :title="imgTitle">
         </div>
     </div>
 
