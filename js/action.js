@@ -39,6 +39,14 @@ var vm = new Vue({
         },
         remove: function (index) {
             this.asteroids.splice(index, 1);
+        },
+        getRowStyle: function (a) {
+            if (a.close_approach_data.length == 0) {
+                return {
+                    border: 'solid 3px red',
+                    color: 'red'
+                }
+            }
         }
     }
 })
