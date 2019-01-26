@@ -10,7 +10,12 @@
     <div id="app">
         <div class="container">
             <div class="card mt-5">
-                <h2 class="card-header">Near-Earth Objects</h2>
+                <h2 class="card-header">
+                    Near-Earth
+                    <transition name="spin" appear>
+                        <span style="display:inline-block">Objects</span>
+                    <transition>
+                </h2>
                 <transition name="shooting-star">
                     <div class="m-3" v-cloak v-if="numAsteroids > 0 && showSummary">
                         <p>Showing {{numAsteroids}} items </p>
@@ -45,7 +50,6 @@
                             </td>
                         </tr>
                     </tbody>
-
                 </table>
             </div>
         </div>
